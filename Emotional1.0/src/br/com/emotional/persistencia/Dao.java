@@ -36,8 +36,10 @@ public class Dao {
 	 * responsável por receber dados do banco esta aberta, aqui a expressão 
 	 * é diferente de nula... se estivel ele fecha, caso ela esteja fechada
 	 * ele não faz nada...*/
-	protected void close()throws Exception {
-		
+	
+	/*
+	public void close()throws Exception {
+		System.out.println("closing");
 		if(rs != null)
 			rs.close();
 		
@@ -46,7 +48,14 @@ public class Dao {
 		
 		if(con != null)
 			con.close();
+		System.out.println("closed");
 	}
+	
+	*/
+	public void close() throws Exception {
+		con.close();
+	}
+	
 	
 	public static void main(String[] args) {
 		try {
